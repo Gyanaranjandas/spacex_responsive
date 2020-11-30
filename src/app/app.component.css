@@ -66,6 +66,14 @@ footer {
     cursor: pointer;
 }
 
+.filter-btn:hover {
+    background-color: #588803;
+}
+
+.filter-btn:active {
+    background-color: #588803;
+}
+
 .card-container {
     display: flex;
     flex: 0 1 84%;
@@ -88,8 +96,8 @@ footer {
 }
 
 .card-img {
-    height: 100px;
-    width: 100px;
+    height: 130px;
+    width: 150px;
     background-color: #eee;
 }
 
@@ -182,7 +190,7 @@ footer a {
         margin-left: 8px;
     }
     .card-container {
-        max-height: 82vh;
+        max-height: 86vh;
         overflow-Y: auto;
     }
     .no-records {
@@ -205,7 +213,7 @@ footer a {
         margin-left: 8px;
     }
     .card-container {
-        max-height: 82vh;
+        max-height: 86vh;
         overflow-Y: auto;
     }
     .no-records {
