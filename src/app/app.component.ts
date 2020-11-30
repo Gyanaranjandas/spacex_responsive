@@ -15,18 +15,18 @@ export class AppComponent implements OnInit {
   spaceData: any = [];
   baseUrl = '';
   constructor(private http: HttpClient, ) { }
-  ngOnInit() {
+  ngOnInit(): void {
     this.baseUrl = 'https://api.spaceXdata.com/v3/launches?limit=100';
     this.getApiCall(this.baseUrl);
   }
-  urlMaker(year, launch, land) {
+  urlMaker(year, launch, land): void {
     let url = this.baseUrl;
     if (launch !== undefined) { url = url + '&launch_success=' + launch; }
-    if (land !== undefined) { url = url + '&land_success=' + land }
-    if (year !== undefined) { url = url + '&launch_year=' + year }
+    if (land !== undefined) { url = url + '&land_success=' + land; }
+    if (year !== undefined) { url = url + '&launch_year=' + year; }
     this.getApiCall(url);
   }
-  getApiCall(url) {
+  getApiCall(url): any {
     this.http.get(url).subscribe(result => {
       console.log(result);
       this.spaceData = result;
