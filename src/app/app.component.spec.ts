@@ -55,7 +55,7 @@ describe('AppComponent', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const app = fixture.componentInstance;
-    app.urlMaker('2006', undefined, undefined)
+    app.urlMaker('2006', undefined, undefined);
     setTimeout(() => { expect(app.spaceData.length).toBeGreaterThan(0); }, 200);
   });
   it('should check filter with successfull Launch', () => {
